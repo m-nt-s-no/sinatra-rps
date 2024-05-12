@@ -13,20 +13,20 @@ end
 get("/rock") do
   @our_choice = "rock"
   @opponent_choice = options.sample
-  @outcome = outcomes[opponent_choice][our_choice]
-  erb(:rock)
+  @outcome = outcomes[@opponent_choice][@our_choice]
+  erb(:outcome)
 end
 
 get("/paper") do
-  @our_choice = "rock"
+  @our_choice = "paper"
   @opponent_choice = options.sample
-  @outcome = outcomes[opponent_choice][our_choice]
-  erb(:paper)
+  @outcome = outcomes[@opponent_choice][@our_choice]
+  erb(:outcome)
 end
 
 get("/scissors") do
-  @our_choice = "rock"
+  @our_choice = "scissors"
   @opponent_choice = options.sample
-  @outcome = outcomes[opponent_choice][our_choice]
-  erb(:scissors)
+  @outcome = outcomes[@opponent_choice][@our_choice]
+  erb(:outcome)
 end
